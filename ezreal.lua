@@ -18,7 +18,7 @@ function AfterObjectLoopEvent(myHer0)
 	    if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
 				local QPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 2000, 250, GetCastRange(myHero, _Q), 60, true, true)			
-				if RPred.HitChance == 1 then
+				if QPred.HitChance == 1 then
 					CastSkillShot(_Q, QPred.PredPos.x, QPred.PredPos.y, QPred.PredPos.z)
 				end
 			end
@@ -27,7 +27,7 @@ function AfterObjectLoopEvent(myHer0)
 	    if CanUseSpell(myHero, _W) == READY and GetButtonValue("W") then
 			if ValidTarget(target, GetCastRange(myHero, _W)) then
 				local WPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 1600, 250, GetCastRange(myHero, _Q), 80, false, true)			
-				if RPred.HitChance == 1 then
+				if WPred.HitChance == 1 then
 					CastSkillShot(_W, WPred.PredPos.x, WPred.PredPos.y, WPred.PredPos.z)
 				end
 			end
