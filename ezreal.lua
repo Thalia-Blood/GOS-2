@@ -2,14 +2,14 @@ require('Inspired')
 require('IMenu')
 AddButton("Q", "Use [Q] in Combo", true)
 AddButton("W", "Use [W] in Combo", true)
-AddButton("R", "Use [R] if killable (Max 1500 range)", true)
+AddButton("R", "Use [R] if killable (Max 1000 range)", true)
 
 function AfterObjectLoopEvent(myHer0)
 	DrawMenu()
 	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
-	local rTarget = GetTarget(1500)
+	local rTarget = GetTarget(1000)
 	if KeyIsDown(0x20) then 
 	
 	    if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
