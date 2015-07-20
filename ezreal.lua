@@ -30,7 +30,7 @@ function AfterObjectLoopEvent(myHer0)
 		end
 		
 		if CanUseSpell(myHero, _R) == READY and GetButtonValue("R") then
-			if rTarget ~= nil then 
+			if target ~= nil then 
 				local RPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 2000, 1000, GetCastRange(myHero, _R), 160, false, true)			
 				if RPred.HitChance == 1 and rmdg() > GetCurrentHP(target) then
 					CastSkillShot(_R, RPred.PredPos.x, RPred.PredPos.y, RPred.PredPos.z)
