@@ -2,7 +2,7 @@ require('Inspired')
 require('IMenu')
 AddButton("Q", "Use [Q] in Combo", true)
 AddButton("W", "Use [W] in Combo", true)
-AddButton("R", "Use [R] if killable (Max 1000 range)", true)
+AddButton("R", "Use [R] if killable", true)
 
 function AfterObjectLoopEvent(myHer0)
 	DrawMenu()
