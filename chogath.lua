@@ -1,15 +1,19 @@
 require('Inspired')
 require('IMenu')
+
 AddButton("Q", "Use [Q] in Combo", true)
 AddButton("W", "Use [W] in Combo", true)
 AddButton("R", "Use [R] if Killable", true)
-
+AddKey("Combo", "Do Combo", string.byte(" "))
+AddKey("LastHit", "Do LastHit", string.byte("X"))
+AddKey("LaneClear", "Do LaneClear", string.byte("V"))
+	
 function AfterObjectLoopEvent(myHer0)
 	DrawMenu()
 	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
-	if KeyIsDown(0x20) then 
+	if GetKeyValue("Combo") then
 	
 	    if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
