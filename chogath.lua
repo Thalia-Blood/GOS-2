@@ -16,7 +16,7 @@ OnLoop(function(myHero)
 	local target = GetCurrentTarget()
 	if GetKeyValue("Combo") then
 	
-	    if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
+		if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
 				local QPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), math.huge, 1200, 950, 250, false, false)
 				if QPred.HitChance == 1 then
