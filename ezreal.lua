@@ -8,7 +8,9 @@ AddKey("Combo", "Do Combo", string.byte(" "))
 AddKey("LastHit", "Do LastHit", string.byte("X"))
 AddKey("LaneClear", "Do LaneClear", string.byte("V"))
 
-function AfterObjectLoopEvent(myHer0)
+local myHero = GetMyHero()
+
+OnLoop(function(myHero)
 	DrawMenu()
 	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
@@ -42,7 +44,7 @@ function AfterObjectLoopEvent(myHer0)
 			end
 		end
 	end	
-end
+end)
 
 function rmdg()
 	if GetCastLevel(myHero, _R) == 0 then
