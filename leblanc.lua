@@ -17,13 +17,13 @@ OnLoop(function(myHero)
 	local target = GetCurrentTarget()
 	if GetKeyValue("Combo") then
 	
-	    if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
+	    	if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
 				CastTargetSpell(target, _Q)
 			end
 		end
 		
-	    if CanUseSpell(myHero, _R) == READY and GetButtonValue("R") then
+		 if CanUseSpell(myHero, _R) == READY and GetButtonValue("R") then
 			if ValidTarget(target, GetCastRange(myHero, _R)) then
 				CastTargetSpell(target, _R)
 			end
