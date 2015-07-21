@@ -1,5 +1,6 @@
 require('Inspired')
 require('IMenu')
+
 AddInfo("Info1", "Ezreal")
 AddButton("Q", "Use [Q] in Combo", true)
 AddButton("W", "Use [W] in Combo", true)
@@ -8,7 +9,7 @@ AddKey("Combo", "Do Combo", string.byte(" "))
 AddKey("LastHit", "Do LastHit", string.byte("X"))
 AddKey("LaneClear", "Do LaneClear", string.byte("V"))
 
-function AfterObjectLoopEvent(myHer0)
+AddAfterObjectLoopEvent(function(myHer0)
 	DrawMenu()
 	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
@@ -42,7 +43,7 @@ function AfterObjectLoopEvent(myHer0)
 			end
 		end
 	end	
-end
+end)
 
 function rmdg()
 	if GetCastLevel(myHero, _R) == 0 then
