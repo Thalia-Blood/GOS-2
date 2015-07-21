@@ -1,5 +1,4 @@
 require('Inspired')
-require('IMenu')
 
 AddButton("Q", "Use [Q] in Combo", true)
 AddButton("W", "Use [W] in Combo", true)
