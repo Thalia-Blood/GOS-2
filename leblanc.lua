@@ -7,8 +7,10 @@ AddButton("R", "Use [R] in Combo", true)
 AddKey("Combo", "Do Combo", string.byte(" "))
 AddKey("LastHit", "Do LastHit", string.byte("X"))
 AddKey("LaneClear", "Do LaneClear", string.byte("V"))
+	
+local myHero = GetMyHero()
 
-function AfterObjectLoopEvent(myHer0)
+OnLoop(function(myHero)
 	DrawMenu()
 	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
@@ -45,4 +47,4 @@ function AfterObjectLoopEvent(myHer0)
 			end
 		end
 	end	
-end
+end)
