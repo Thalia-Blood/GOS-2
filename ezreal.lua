@@ -17,7 +17,7 @@ OnLoop(function(myHero)
 	local target = GetCurrentTarget()
 	if GetKeyValue("Combo") then 
 	
-	    if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
+	    	if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
 				local QPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 2000, 250, GetCastRange(myHero, _Q), 60, true, true)			
 				if QPred.HitChance == 1 then
@@ -26,7 +26,7 @@ OnLoop(function(myHero)
 			end
 		end
 		
-	    if CanUseSpell(myHero, _W) == READY and GetButtonValue("W") then
+	    	if CanUseSpell(myHero, _W) == READY and GetButtonValue("W") then
 			if ValidTarget(target, GetCastRange(myHero, _W)) then
 				local WPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 1600, 250, GetCastRange(myHero, _Q), 80, false, true)			
 				if WPred.HitChance == 1 then
