@@ -8,7 +8,7 @@ AddKey("Combo", "Do Combo", string.byte(" "))
 AddKey("LastHit", "Do LastHit", string.byte("X"))
 AddKey("LaneClear", "Do LaneClear", string.byte("V"))
 
-AddAfterObjectLoopEvent(function(myHer0)
+AfterObjectLoopEvent(myHer0)
 	DrawMenu()
 	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
@@ -45,4 +45,4 @@ AddAfterObjectLoopEvent(function(myHer0)
 			end
 		end
 	end	
-end)
+end
