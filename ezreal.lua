@@ -1,5 +1,4 @@
 require('Inspired')
-require('IMenu')
 
 AddInfo("Info1", "Ezreal")
 AddButton("Q", "Use [Q] in Combo", true)
