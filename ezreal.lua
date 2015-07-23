@@ -12,7 +12,6 @@ local myHero = GetMyHero()
 
 OnLoop(function(myHero)
 	DrawMenu()
-	myHero = myHer0
 	myHeroPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
 	if GetKeyValue("Combo") then 
