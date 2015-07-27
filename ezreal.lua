@@ -9,7 +9,6 @@ Menu.addParam("combo", "Combo", SCRIPT_PARAM_KEYDOWN, string.byte(" "))
 local myHero = GetMyHero()
 
 OnLoop(function(myHero)
-	DrawMenu()
 	myHeroPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
 	if Menu.combo then 
