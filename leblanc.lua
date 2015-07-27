@@ -12,7 +12,7 @@ local myHero = GetMyHero()
 OnLoop(function(myHero)
 	myHeroPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
-	if GetKeyValue("combo") then
+	if Menu.combo then
 	
 	    	if CanUseSpell(myHero, _Q) == READY and Menu.Q then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
