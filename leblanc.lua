@@ -1,6 +1,6 @@
 require('Inspired')
 
-Menu = scriptConfig("lb", "Sterling LB")
+Menu = scriptConfig("lb", "Sterling LeBlanc")
 	Menu.addParam("Q", "Use Q in Combo", SCRIPT_PARAM_ONOFF, true)
 	Menu.addParam("W", "Use W in Combo", SCRIPT_PARAM_ONOFF, true)
 	Menu.addParam("E", "Use E in Combo", SCRIPT_PARAM_ONOFF, true)
