@@ -1,6 +1,6 @@
 require('Inspired')
 
-Menu = scriptConfig("Ezreal", "Ezreal script")
+Menu = scriptConfig("Ezreal", "Sterling Ezreal")
 Menu.addParam("useq", "Use Q in combo", SCRIPT_PARAM_ONOFF, true)
 Menu.addParam("usew", "Use W in combo", SCRIPT_PARAM_ONOFF, true)
 Menu.addParam("user", "Use R if killable", SCRIPT_PARAM_ONOFF, true)
