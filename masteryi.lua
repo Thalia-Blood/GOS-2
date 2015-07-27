@@ -8,7 +8,7 @@ Menu = scriptConfig("sterlingyi", "Sterling Yi")
 local myHero = GetMyHero()
 
 OnLoop(function(myHero)
-	if CanUseSpell(myHero, _Q) == READY and Menu.combo and Menu.Q
+	if CanUseSpell(myHero, _Q) == READY and Menu.combo then
 		target = GetCurrentTarget()
 		if ValidTarget(target, 600) then CastTargetSpell(target, _Q) end
 	end
