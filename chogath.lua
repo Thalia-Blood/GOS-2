@@ -1,21 +1,19 @@
 require('Inspired')
 
-AddButton("Q", "Use [Q] in Combo", true)
-AddButton("W", "Use [W] in Combo", true)
-AddButton("R", "Use [R] if Killable", true)
-AddKey("Combo", "Do Combo", string.byte(" "))
-AddKey("LastHit", "Do LastHit", string.byte("X"))
-AddKey("LaneClear", "Do LaneClear", string.byte("V"))
+Menu = scriptConfig("cho", "Sterling Cho'Gath")
+	Menu.addParam("Q", "Use Q in Combo", SCRIPT_PARAM_ONOFF, true)
+	Menu.addParam("W", "Use W in Combo", SCRIPT_PARAM_ONOFF, true)
+	Menu.addParam("R", "Use R in Combo", SCRIPT_PARAM_ONOFF, true)
+	Menu.addParam("combo", "Combo Key", SCRIPT_PARAM_KEYDOWN, string.byte(" "))
 
 local myHero = GetMyHero()
 
 OnLoop(function(myHero)
-	DrawMenu()
 	myHeroPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
-	if GetKeyValue("Combo") then
+	if Menu.combo then
 	
-		if CanUseSpell(myHero, _Q) == READY and GetButtonValue("Q") then
+		if CanUseSpell(myHero, _Q) == READY and Menu.Q then
 			if ValidTarget(target, GetCastRange(myHero, _Q)) then
 				local QPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), math.huge, 1200, 950, 250, false, false)
 				if QPred.HitChance == 1 then
@@ -24,13 +22,13 @@ OnLoop(function(myHero)
 			end
 		end
 		
-		if CanUseSpell(myHero, _W) == READY and GetButtonValue("W") then
+		if CanUseSpell(myHero, _W) == READY and Menu.W then
 			if ValidTarget(target, GetCastRange(myHero, _W)) then
 				CastTargetSpell(target, _W)
 			end				
 		end
 			
-		if CanUseSpell(myHero, _R) == READY and GetButtonValue("R") then
+		if CanUseSpell(myHero, _R) == READY and Menu.R then
 			if ValidTarget(target, GetCastRange(myHero, _R)) and rDmg() > GetCurrentHP(target) then 
 				CastTargetSpell(target, _R)
 			end
