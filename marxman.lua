@@ -4,8 +4,8 @@ require("Inspired")
 PrintChat(string.format("<font color='#ffff00'>Marxman loaded with </font><font color='#FFFFFF'>Ashe</font>"))
 
 Menu = scriptConfig("mmashe", "Marxman: Ashe")
-	Menu.addParam("Q", "Use Q in Low HP", SCRIPT_PARAM_ONOFF, true)
-	Menu.addParam("W", "Use W in Combo", SCRIPT_PARAM_ONOFF, true)
+	Menu.addParam("Q", "Use Q", SCRIPT_PARAM_ONOFF, true)
+	Menu.addParam("W", "Use W", SCRIPT_PARAM_ONOFF, true)
 	Menu.addParam("R", "Use R if Killable", SCRIPT_PARAM_ONOFF, true)
 	Menu.addParam("combo", "Combo Key", SCRIPT_PARAM_KEYDOWN, string.byte(" "))
 
