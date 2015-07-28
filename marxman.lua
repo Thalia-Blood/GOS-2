@@ -1,6 +1,6 @@
 if GetObjectName(GetMyHero()) == "Ashe" then
 require("Inspired")
-
+	
 PrintChat(string.format("<font color='#ffff00'>Marxman loaded with </font><font color='#FFFFFF'>Ashe</font>"))
 
 Menu = scriptConfig("mmashe", "Marxman: Ashe")
