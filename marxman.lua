@@ -80,7 +80,6 @@ local SPEED_Q, DELAY_Q, RANGE_Q, WIDTH_Q = 2000, 250, 1200, 60
 local SPEED_W, DELAY_W, RANGE_W, WIDTH_W = 1600, 250, 1050, 80
 local SPEED_R, DELAY_R, RANGE_R, WIDTH_R = 2000, 1000, 20000, 160
 
-local SPEED_Q
 OnLoop(function(myHero)
 	myPos = GetOrigin(myHero)
 	local target = GetCurrentTarget()
