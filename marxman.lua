@@ -169,7 +169,7 @@ OnLoop(function(myHero)
 		end
 
 		if Menu.E then
-			if CanUseSpell(myHero, _W) == READY and ValidTarget(target, 950) then
+			if CanUseSpell(myHero, _E) == READY and ValidTarget(target, 950) then
 				CastSkillShot(_E, mousePos.x, mousePos.y, mousePos.z)
 			end
 		end
@@ -219,11 +219,11 @@ OnLoop(function(myHero)
 	targetPos = GetOrigin(target)
 
 	if Menu.combo then
-		if Menu.Q then
-			if myRange == 525 and GetDistance(target) > 525 and CanUseSpell(myHero, _Q) == READY then
+		if Menu.Q and ValidTarget(target) then
+			if myRange == 525 and GetDistance(target, myHero) > 525 and CanUseSpell(myHero, _Q) == READY then
 				CastSpell(_Q)
 			end 
-			if myRange > 525 and GetDistance(target) < 525 and CanUseSpell(myHero, _Q) == READY then
+			if myRange > 525 and GetDistance(target, myHero) < 525 and CanUseSpell(myHero, _Q) == READY then
 				CastSpell(_Q)
 			end
 		end
@@ -433,3 +433,4 @@ function rDmg()
 	end
 end
 end
+
