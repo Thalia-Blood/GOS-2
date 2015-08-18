@@ -15,20 +15,20 @@ OnLoop(function(myHero)
 	if Menu.combo then
 	
 	    	if CanUseSpell(myHero, _Q) == READY and Menu.Q then
-			if ValidTarget(target, GetCastRange(myHero, _Q)) then
+			if ValidTarget(target, 700) then
 				CastTargetSpell(target, _Q)
 			end
 		end
 		
 		 if CanUseSpell(myHero, _R) == READY and Menu.R then
-			if ValidTarget(target, GetCastRange(myHero, _R)) then
+			if ValidTarget(target, 700) then
 				CastTargetSpell(target, _R)
 			end
 		end
 		
 		if CanUseSpell(myHero, _W) == READY and Menu.W and GetCastName(myHero, _W) ~= "leblancslidereturn" then
-			if ValidTarget(target, GetCastRange(myHero, _W)) then
-				local WPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 1500, 0, GetCastRange(myHero, _Q), 220, false, false)
+			if ValidTarget(target, 600) then
+				local WPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 1500, 0, 600, 220, false, false)
 				if WPred.HitChance == 1 then
 					CastSkillShot(_W, WPred.PredPos.x, WPred.PredPos.y, WPred.PredPos.z)
 				end
@@ -36,8 +36,8 @@ OnLoop(function(myHero)
 		end
 		
 		if CanUseSpell(myHero, _E) == READY and Menu.E then
-			if ValidTarget(target, GetCastRange(myHero, _E-25)) then 
-				local EPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 1600, 250, GetCastRange(myHero, _E), 70, true, true)				
+			if ValidTarget(target, 900) then 
+				local EPred = GetPredictionForPlayer(myHeroPos, target, GetMoveSpeed(target), 1600, 250, 900, 70, true, true)				
 				if EPred.HitChance == 1 then
 					CastSkillShot(_E, EPred.PredPos.x, EPred.PredPos.y, EPred.PredPos.z)
 				end
